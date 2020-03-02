@@ -3,6 +3,7 @@ import re
 import multiprocessing
 import os.path as osp
 import gym
+import gym_canoe_sim0
 from collections import defaultdict
 import tensorflow as tf
 import numpy as np
@@ -49,7 +50,7 @@ _game_envs['retro'] = {
     'SpaceInvaders-Snes',
 }
 
-
+_game_envs['custom_type']={'canoe_sim-v0'}
 def train(args, extra_args):
     env_type, env_id = get_env_type(args)
     print('env_type: {}'.format(env_type))
